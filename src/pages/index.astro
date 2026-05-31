@@ -1,0 +1,78 @@
+---
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout door="home">
+
+  <!-- ── Hero ─────────────────────────────────────────── -->
+  <div class="page-body">
+    <section class="hero" aria-label="Introduction">
+      <p class="hero-eyebrow">The Skinny Union Project</p>
+      <h1 class="hero-headline">
+        Professional workers who want higher wages have never had a union
+        <em>designed for them.</em>
+      </h1>
+      <div class="hero-rule"></div>
+      <p class="hero-sub">
+        The skinny union is the collective bargaining model built for people who already know they're
+        worth more — and don't need a grievance apparatus to prove it.
+      </p>
+    </section>
+  </div>
+
+  <!-- ── Three Doors ───────────────────────────────────── -->
+  <div class="page-body">
+    <nav class="door-grid" aria-label="Site sections">
+
+      <a href="/employees" class="door-card door-card--employees">
+        <span class="door-tag">Employees</span>
+        <span class="door-sub">"Get Paid"</span>
+        <span class="door-register">Activation register</span>
+        <p class="door-desc">
+          You know what the market pays for your work. Your employer is counting on you not to
+          do anything about it. Here's what collective bargaining looks like when the only agenda
+          is compensation.
+        </p>
+        <span class="door-arrow">Enter &rarr;</span>
+      </a>
+
+      <a href="/press" class="door-card door-card--press">
+        <span class="door-tag">Press</span>
+        <span class="door-sub">"The Missing Story"</span>
+        <span class="door-register">Sober register</span>
+        <p class="door-desc">
+          The professional labor market has a structural compensation problem that collective
+          bargaining theory predicts and empirical evidence confirms. The skinny union is the
+          mechanism that solves it. The story hasn't been told yet.
+        </p>
+        <span class="door-arrow">Enter &rarr;</span>
+      </a>
+
+      <a href="/research" class="door-card door-card--research">
+        <span class="door-tag">Research</span>
+        <span class="door-sub">"Ooh, a White Paper!"</span>
+        <span class="door-register">Sober register</span>
+        <p class="door-desc">
+          The legal architecture is sound. The labor market analysis is documented. The
+          insider objection is addressed at length. The academic paper is forthcoming.
+          Everything else is already here.
+        </p>
+        <span class="door-arrow">Enter &rarr;</span>
+      </a>
+
+    </nav>
+  </div>
+
+  <!-- ── What This Is Not ──────────────────────────────── -->
+  <div class="page-body">
+    <div class="licensed-break licensed-break--cobalt" role="note">
+      <p>
+        The Skinny Union Project is not a proposal to weaken unions or undermine collective
+        bargaining. It is a proposal to extend collective bargaining to workers and sectors
+        that traditional union models have consistently failed to reach.
+      </p>
+    </div>
+  </div>
+
+</BaseLayout>
