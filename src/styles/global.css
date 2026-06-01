@@ -97,7 +97,7 @@ p + p { margin-top: 1em; }
 
 .masthead-lockup {
   display: flex;
-  align-items: center;
+  align-items: flex-end;  /* bottom-align mark to gold baseline */
   gap: 0;
   text-decoration: none;
   flex-shrink: 0;
@@ -105,17 +105,18 @@ p + p { margin-top: 1em; }
 
 .masthead-mark {
   width: auto;
-  height: 44px;
+  height: 48px;
   flex-shrink: 0;
+  margin-bottom: 6px;  /* lift mark so gold exit aligns with baseline */
 }
 
 .masthead-wordmark {
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding-left: 14px;
-  border-left: 2.5px solid var(--gold);
-  margin-left: 10px;
+  padding-left: 10px;
+  margin-left: 4px;
+  /* no border-left — baseline runs horizontally under the name */
 }
 
 .masthead-the {
@@ -135,6 +136,8 @@ p + p { margin-top: 1em; }
   color: var(--ink);
   line-height: 1;
   letter-spacing: -0.01em;
+  border-bottom: 2.5px solid var(--gold);  /* the gold baseline */
+  padding-bottom: 3px;
 }
 
 .masthead-tagline {
@@ -144,7 +147,7 @@ p + p { margin-top: 1em; }
   letter-spacing: 0.1em;
   color: var(--slate);
   line-height: 1.4;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 /* ── Masthead nav ── */
@@ -593,7 +596,13 @@ p + p { margin-top: 1em; }
 .footer-mark {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+}
+
+.footer-spiral {
+  width: 56px;
+  height: 56px;
+  opacity: 0.9;
 }
 
 .footer-name {
