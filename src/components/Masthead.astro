@@ -63,17 +63,17 @@ const { door = 'home' } = Astro.props;
         <span class="nav-label">Employees</span>
         <span class="nav-sub">Get Paid</span>
       </a>
-      <a href="/press"
-         class:list={["nav-item", "nav-item--press", { "nav-item--active": door === 'press' }]}
-         aria-current={door === 'press' ? 'page' : undefined}>
-        <span class="nav-label">Press</span>
-        <span class="nav-sub">The Missing Story</span>
-      </a>
       <a href="/research"
          class:list={["nav-item", "nav-item--research", { "nav-item--active": door === 'research' }]}
          aria-current={door === 'research' ? 'page' : undefined}>
         <span class="nav-label">Research</span>
         <span class="nav-sub">Ooh, a White Paper!</span>
+      </a>
+      <a href="/press"
+         class:list={["nav-item", "nav-item--press", { "nav-item--active": door === 'press' }]}
+         aria-current={door === 'press' ? 'page' : undefined}>
+        <span class="nav-label">Press</span>
+        <span class="nav-sub">The Missing Story</span>
       </a>
     </nav>
 
