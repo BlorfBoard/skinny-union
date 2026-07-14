@@ -57,6 +57,12 @@ const { door = 'home' } = Astro.props;
 
     <!-- Three-door navigation -->
     <nav class="masthead-nav" aria-label="Site sections">
+      <a href="/press"
+         class:list={["nav-item", "nav-item--press", { "nav-item--active": door === 'press' }]}
+         aria-current={door === 'press' ? 'page' : undefined}>
+        <span class="nav-label">The Argument</span>
+        <span class="nav-sub">The Missing Story</span>
+      </a>
       <a href="/employees"
          class:list={["nav-item", "nav-item--employees", { "nav-item--active": door === 'employees' }]}
          aria-current={door === 'employees' ? 'page' : undefined}>
@@ -68,12 +74,6 @@ const { door = 'home' } = Astro.props;
          aria-current={door === 'research' ? 'page' : undefined}>
         <span class="nav-label">Research</span>
         <span class="nav-sub">Ooh, a White Paper!</span>
-      </a>
-      <a href="/press"
-         class:list={["nav-item", "nav-item--press", { "nav-item--active": door === 'press' }]}
-         aria-current={door === 'press' ? 'page' : undefined}>
-        <span class="nav-label">The Argument</span>
-        <span class="nav-sub">The Missing Story</span>
       </a>
     </nav>
 

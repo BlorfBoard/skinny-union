@@ -257,6 +257,14 @@ p + p { margin-top: 1em; }
   margin-bottom: 0.5em;
 }
 
+/* Inline links within body text — cobalt, underlined */
+.col-main p a {
+  color: var(--cobalt);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 /* ── Licensed break (full-bleed color band) ── */
 .licensed-break {
   margin: 0 calc(-1 * var(--page-pad));
