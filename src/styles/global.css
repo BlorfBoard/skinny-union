@@ -630,6 +630,25 @@ p + p { margin-top: 1em; }
   max-width: 60ch;
 }
 
+.footer-contact {
+  font-family: var(--garamond);
+  font-size: 0.9rem;
+  color: var(--slate);
+  line-height: 1.55;
+}
+
+.footer-contact a,
+.footer-contact-link {
+  color: rgba(237, 227, 207, 0.85);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.footer-contact a:hover {
+  color: var(--cream);
+}
+
 .footer-meta {
   font-family: var(--jost);
   font-size: 0.56rem;

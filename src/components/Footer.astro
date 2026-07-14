@@ -29,6 +29,10 @@
         </p>
       </div>
 
+      <p class="footer-contact">
+        Press and academic inquiries: <span class="footer-contact-link" id="footer-contact-link">enable JavaScript to view</span>
+      </p>
+
       <p class="footer-meta">
         The Skinny Union Project &nbsp;·&nbsp; 2026
       </p>
@@ -36,3 +40,20 @@
     </div>
   </div>
 </footer>
+
+<script>
+  // Address assembled at render time — never present as a literal
+  // "mailto:" string or "@"-address in the page source, to reduce
+  // harvesting by scrapers that read static HTML without executing JS.
+  const user = 'contact';
+  const domain = 'skinnyunionproject' + '.org';
+  const address = user + '@' + domain;
+
+  const el = document.getElementById('footer-contact-link');
+  if (el) {
+    const link = document.createElement('a');
+    link.href = 'mailto:' + address;
+    link.textContent = address;
+    el.replaceWith(link);
+  }
+</script>
