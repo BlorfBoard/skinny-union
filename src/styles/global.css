@@ -176,15 +176,15 @@ p + p { margin-top: 1em; }
 .masthead-nav-divider {
   align-self: stretch;
   width: 1px;
-  background: var(--rule);
-  opacity: 0.7;
+  background: var(--gold);
+  opacity: 0.75;
   margin: 2px -14px 6px;
 }
 
 .nav-item--faq .nav-label {
   font-size: 0.62rem;
   font-weight: 500;
-  color: var(--slate);
+  color: var(--ink);
 }
 .nav-item--faq.nav-item--active .nav-label,
 .nav-item--faq:hover .nav-label { color: var(--cobalt); }
@@ -269,7 +269,7 @@ p + p { margin-top: 1em; }
   color: var(--ink);
   margin: 44px 0 14px;
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--gold);
   scroll-margin-top: 24px;
 }
 .col-main > h3.faq-question:first-child { margin-top: 0; }
@@ -487,8 +487,7 @@ p + p { margin-top: 1em; }
 }
 
 .door-hero--press::before,
-.door-hero--research::before,
-.door-hero--faq::before {
+.door-hero--research::before {
   content: '';
   position: absolute;
   top: 0; left: 0;
@@ -533,8 +532,20 @@ p + p { margin-top: 1em; }
 }
 .door-hero--employees .door-hero-rule { background: var(--crimson); }
 .door-hero--press .door-hero-rule,
-.door-hero--research .door-hero-rule,
-.door-hero--faq .door-hero-rule       { background: var(--cobalt); }
+.door-hero--research .door-hero-rule  { background: var(--cobalt); }
+
+/* FAQ — gold graphic furniture. Gold measures 1.99:1 on cream and cannot
+   carry text; it is used here only for rails, rules and dividers, which
+   carry no information. Text, labels and links stay cobalt or ink. */
+.door-hero--faq::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--gold);
+}
+.door-hero--faq .door-hero-rule       { background: var(--gold); }
 
 .door-hero-sub {
   font-family: var(--garamond);
