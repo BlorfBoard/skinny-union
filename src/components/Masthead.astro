@@ -1,7 +1,7 @@
 ---
 // Masthead.astro
 interface Props {
-  door?: 'home' | 'employees' | 'press' | 'research';
+  door?: 'home' | 'employees' | 'press' | 'research' | 'faq';
 }
 const { door = 'home' } = Astro.props;
 ---
@@ -74,6 +74,18 @@ const { door = 'home' } = Astro.props;
          aria-current={door === 'research' ? 'page' : undefined}>
         <span class="nav-label">The Full Case</span>
         <span class="nav-sub">Ooh, a White Paper!</span>
+      </a>
+
+      <!--
+        FAQ is reference material, not a fourth door. Rendered subordinate to the
+        three doors: divider, smaller label, slate until hover or active.
+      -->
+      <span class="masthead-nav-divider" aria-hidden="true"></span>
+
+      <a href="/faq"
+         class:list={["nav-item", "nav-item--faq", { "nav-item--active": door === 'faq' }]}
+         aria-current={door === 'faq' ? 'page' : undefined}>
+        <span class="nav-label">FAQ</span>
       </a>
     </nav>
 

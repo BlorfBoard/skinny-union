@@ -172,6 +172,24 @@ p + p { margin-top: 1em; }
 .nav-item--research:hover .nav-label { color: var(--cobalt); }
 .nav-item--research.nav-item--active { border-bottom-color: var(--cobalt); }
 
+/* FAQ — reference material, subordinate to the three doors */
+.masthead-nav-divider {
+  align-self: stretch;
+  width: 1px;
+  background: var(--rule);
+  opacity: 0.7;
+  margin: 2px -14px 6px;
+}
+
+.nav-item--faq .nav-label {
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--slate);
+}
+.nav-item--faq.nav-item--active .nav-label,
+.nav-item--faq:hover .nav-label { color: var(--cobalt); }
+.nav-item--faq.nav-item--active { border-bottom-color: var(--cobalt); }
+
 /* ═══════════════════════════════════════════════════════════
    PAGE LAYOUT — Asymmetric two-column grid
 ═══════════════════════════════════════════════════════════ */
@@ -238,6 +256,23 @@ p + p { margin-top: 1em; }
   color: var(--ink);
   margin: 28px 0 10px;
 }
+
+/* FAQ questions — Garamond, sized between h2 and body; the small-caps
+   .col-main h3 label style is wrong for an interrogative heading. */
+.col-main h3.faq-question {
+  font-family: var(--garamond);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  text-transform: none;
+  color: var(--ink);
+  margin: 44px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 24px;
+}
+.col-main > h3.faq-question:first-child { margin-top: 0; }
 
 .col-main p {
   font-size: 1.05rem;
@@ -452,7 +487,8 @@ p + p { margin-top: 1em; }
 }
 
 .door-hero--press::before,
-.door-hero--research::before {
+.door-hero--research::before,
+.door-hero--faq::before {
   content: '';
   position: absolute;
   top: 0; left: 0;
@@ -487,6 +523,7 @@ p + p { margin-top: 1em; }
 .door-hero--employees .door-hero-headline em { color: var(--crimson); font-style: italic; }
 .door-hero--press .door-hero-headline em     { color: var(--cobalt);  font-style: italic; }
 .door-hero--research .door-hero-headline em  { color: var(--cobalt);  font-style: italic; }
+.door-hero--faq .door-hero-headline em       { color: var(--cobalt);  font-style: italic; }
 
 .door-hero-rule {
   height: 3px;
@@ -496,7 +533,8 @@ p + p { margin-top: 1em; }
 }
 .door-hero--employees .door-hero-rule { background: var(--crimson); }
 .door-hero--press .door-hero-rule,
-.door-hero--research .door-hero-rule  { background: var(--cobalt); }
+.door-hero--research .door-hero-rule,
+.door-hero--faq .door-hero-rule       { background: var(--cobalt); }
 
 .door-hero-sub {
   font-family: var(--garamond);
@@ -703,11 +741,27 @@ p + p { margin-top: 1em; }
 
   .masthead-tagline { display: none; }
 
-  .masthead-nav {
-    gap: 20px;
+  /* Narrow viewports: stack the lockup above the doors and let the nav
+     wrap, so the masthead fits the viewport instead of overflowing it. */
+  .masthead-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 
+  .masthead-nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .nav-item { text-align: left; }
+
   .nav-sub { display: none; }
+
+  .masthead-nav-divider {
+    margin: 2px 0 6px;
+  }
 
   .hero-headline {
     font-size: 2.2rem;
